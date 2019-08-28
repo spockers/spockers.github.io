@@ -1,6 +1,24 @@
-<body bgcolor="#000000">
+
+    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="assets/css/github-markdown.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Futurerestore | Guide</title>
+</head>
+<body>
+    <input type="checkbox" onclick="darkmode()" id="switch" /><label for="switch"></label>
+    <div class="markdown-body">
+
+
+
 <p>&nbsp;</p>
-<h1><span style="color: #ffffff;"><a style="color: #ffffff;" href="itms-services://?action=download-manifest&amp;url=https://spockers.github.io/Undecimus-v3.5.2_signed.plist">Install unc0ver 3.5.6</a></span></h1><div>
+<h1><a href="itms-services://?action=download-manifest&amp;url=https://spockers.github.io/Undecimus-v3.5.2_signed.plist">Install unc0ver 3.5.6</a></span></h1><div>
 <p>&nbsp;</p>
 </div>
 <div>
@@ -42,3 +60,25 @@
 
 <h1><span style="color: #ffffff;"><a style="color: #ffffff;" href="itms-services://?action=download-manifest&amp;url=https://spockers.github.io/filzaescaped.plist">Install FilzaEscaped11-12 (YOU DO NOT NEED THIS UNLESS YOU CAN'T JAILBREAK)</a></span></h1></body>
 
+  
+<script>
+    $('body').toggleClass(localStorage.toggled);
+    function darkmode() {
+    /*DARK CLASS*/
+    if (localStorage.toggled != 'dark') {
+    $('body').toggleClass('dark', true);
+    localStorage.toggled = "dark";
+    } else {
+    $('body').toggleClass('dark', false);
+    localStorage.toggled = "";
+    }
+    }
+    /*Add 'checked' property to input if background == dark*/
+    if ($('body').hasClass('dark')) {
+    $( '#switch' ).prop( "checked", true )
+    } else {
+    $( '#switch' ).prop( "checked", false )
+    }
+</script>
+</body>
+</html>
